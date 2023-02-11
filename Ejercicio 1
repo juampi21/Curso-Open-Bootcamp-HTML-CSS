@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio de Introducción a HTML en OpenBootcamp</title>
+  </head>
+  <body>
+    <div>
+      <p>Este es mi primer comentario de dos líneas</p>
+      <p>Aprendiendo a documentar mi código con OpenBootcamp</p>
+    </div>
+      <div>
+        <h3>Videos favoritos de cocina vegana:</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=Y9Pcr21K8k0&t=669s">Milanesas veganas</a></li>
+      	  <li><a href="https://www.youtube.com/watch?v=MIdu8mEOed4&t=2s">Tortillitas veganas ¡Sólo 3 ingredientes!</a></li>
+          <li><a href=""https://www.youtube.com/watch?v=_UrL8q9P2mg">Zetas a la provenzal</a></li>
+        </ul>
+      </div>
+  </body>
+</html>
