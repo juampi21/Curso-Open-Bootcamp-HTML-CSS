@@ -1,0 +1,46 @@
+Proceso EstadisticasVentas
+	Definir ventas[5, 5] Como Entero
+	Definir total_dia[5] Como Entero
+	Definir total_producto[5] Como Entero
+	Definir max_producto Como Entero
+	Definir max_cantidad Como Entero
+	Definir dia_max_producto Como Entero
+
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Para j <- 0 Hasta 4 Con Paso 1 Hacer
+			ventas[i, j] <- Azar(1, 100)
+		FinPara
+	FinPara
+
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		total_dia[i] <- 0
+		Para j <- 0 Hasta 4 Con Paso 1 Hacer
+			total_dia[i] <- total_dia[i] + ventas[i, j]
+			total_producto[j] <- total_producto[j] + ventas[i, j]
+		FinPara
+	FinPara
+
+	Escribir "|          | Lunes | Martes | Miercoles | Jueves | Viernes | Total producto |"
+	Escribir "|----------|-------|--------|-----------|--------|---------|----------------|"
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Escribir "| Producto ", i + 1, " | ", ventas[i, 0], "   | ", ventas[i, 1], "    | ", ventas[i, 2], "         | ", ventas[i, 3], "    | ", ventas[i, 4], "     | ", total_dia[i], "             |"
+	FinPara
+	Escribir "|----------|-------|--------|-----------|--------|---------|----------------|"
+	Escribir "| Total    | ", total_producto[0], "   | ", total_producto[1], "    | ", total_producto[2], "        | ", total_producto[3], "   | ", total_producto[4], "    |                |"
+
+	max_cantidad <- 0
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Para j <- 0 Hasta 4 Con Paso 1 Hacer
+			Si ventas[i, j] > max_cantidad Entonces
+				max_cantidad <- ventas[i, j]
+				max_producto <- i
+				dia_max_producto <- j
+			FinSi
+		FinPara
+	FinPara
+
+	Escribir "|----------|-------|--------|-----------|--------|---------|----------------|"
+	Escribir "| Producto mas vendido    | P", max_producto + 1, "    | P", max_producto + 1, "     | P", max_producto + 1, "        | P", max_producto + 1, "    | P", max_producto + 1, "     | P", max_producto + 1, "             |"
+	Escribir "|----------|-------|--------|-----------|--------|---------|----------------|"
+	Escribir "| El producto más vendido fue el producto P", max_producto + 1, " el día ", dia_max_producto + 1, " con ", max_cantidad, " unidades vendidas.
+
